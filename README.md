@@ -2,6 +2,17 @@
 
 <img src="blob:chrome-untrusted://media-app/4e6c1c82-080c-4370-8521-fe12db99a27f" alt="Screenshot 2024-07-27 07.57.56.png"/>![image](https://github.com/user-attachments/assets/f8317bac-d091-4e80-a7f9-2e25c1de2022)
 
+You can run the program using a small or a large database. To use the small database, run it as
+
+*python degrees.py small*
+
+To use the large database (you may have to be patient):
+
+*python degrees.py small*
+
+
+[Degrees of separation video](https://youtu.be/hTyNj9ij3vc)
+
 ## Background
 
 According to the Six Degrees of Kevin Bacon game, anyone in the Hollywood film industry can be connected to Kevin Bacon within six steps, where each step consists of finding a film that two actors both starred in.
@@ -29,7 +40,7 @@ Let's take a look at *degrees.py*. At the top, several data structures are defin
 - The *main* function in this program first loads data into memory (the directory from which the data is loaded can be specified by a command-line argument). Then, the function prompts the user to type in two names. The person_id_for_name function retrieves the id for any person (and handles prompting the user to clarify, in the event that multiple people have the same name). The function then calls the shortest_path function to compute the shortest path between the two people, and prints out the path.
 
 - *shortest_path* function returns the shortest path from the person with id source to the person with the id target.
-   - If there is a path from the source to the target, the function returns a list, where each list item is the next (movie_id, person_id) pair in the path from the source to the target. Each pair should be a tuple of two strings. For example, if the return value of shortest_path were [(1, 2), (3, 4)], that would mean that the source starred in movie 1 with person 2, person 2 starred in movie 3 with person 4, and person 4 is the target.
+   - If there is a path from the source to the target, the function returns a list, where each list item is the next (movie_id, person_id) pair in the path from the source to the target. Each pair is a tuple of two strings. For example, if the return value of shortest_path were [(1, 2), (3, 4)], that would mean that the source starred in movie 1 with person 2, person 2 starred in movie 3 with person 4, and person 4 is the target.
 
   - If there are multiple paths of minimum length from the source to the target, the function can return any of them.
   - If there is no possible path between two actors, the function returns None.
