@@ -112,9 +112,9 @@ def shortest_path(source, target):
         if frontier.empty():
             return None
 
-        print(f'Iteration {it} - F-length: {len(frontier.frontier)}')
+        #print(f'Iteration {it} - F-length: {len(frontier.frontier)}')
 #        for node in frontier.frontier:
-#            print(f'Frontier content: {people[node.state[1]]["name"]} in {movies[node.state[0]]["title"]}')
+             print(f'Frontier content: {people[node.state[1]]["name"]} in {movies[node.state[0]]["title"]}')
     
         # Choose a node from the frontier
         node = frontier.remove()
